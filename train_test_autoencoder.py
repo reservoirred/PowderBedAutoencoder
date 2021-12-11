@@ -67,7 +67,10 @@ valid_list = [x for ind,x in enumerate(sample_list) if ind in indexes_valid]
 print(len(sample_list))
 
 tform_matrix = np.loadtxt(main_folder+'tform_bed.txt')
-#tform_matrix[2,0:1] = 0
+# actual tform values below
+#[1.35786458946702	-0.0184261429440753	-1.20688534505464e-05
+#0.114196836230360	1.54483936478397	0.000201776048811541
+#-268.623676745108	-149.886118613164	1]
 
 def get_sample(sample_name,batch_size,aug):
     img = np.array(cv2.imread(data_folder+sample_name,-1),dtype='float32')/255
